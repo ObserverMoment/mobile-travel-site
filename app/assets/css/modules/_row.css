@@ -6,6 +6,38 @@
     margin-bottom: 1.5rem;
   }
 
+  &--t-padding {
+    padding-top: 50px;
+  }
+
+  /* Select the colummn and offset the padding below. This will ensure that the last column-child in any row will sit up against the right hand side of the page with no margin */
+  /* This is because the negative margin will affect the border-box calculation */
+  /* Combined with the .wrapper css which states overflow: hidden; so that the overhang on the edge of the wrapper caused by this will not display */
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  &--gutters-wide {
+    margin-right: -100px;
+  }
+
+  &--gutters-small {
+    margin-right: -45px;
+  }
+
+  /* Give all children a gutter to the right */
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
+  &--gutters-wide > div {
+    padding-right: 100px;
+  }
+
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
+
   @mixin atMedium {
 
     &__b-margin-until-medium {
@@ -36,26 +68,6 @@
       float: left;
       width: 63%
     }
-  }
-
-  /* Select the colummn and offset the padding below. This will ensure that the last column-child in any row will sit up against the right hand side of the page with no margin */
-  /* This is because the negative margin will affect the border-box calculation */
-  /* Combined with the .wrapper css which states overflow: hidden; so that the overhang on the edge of the wrapper caused by this will not display */
-  &--gutters {
-    margin-right: -65px;
-  }
-
-  &--gutters-wide {
-    margin-right: -100px;
-  }
-
-  /* Give all children a gutter to the right */
-  &--gutters > div {
-    padding-right: 65px;
-  }
-
-  &--gutters-wide > div {
-    padding-right: 100px;
   }
 
 }
