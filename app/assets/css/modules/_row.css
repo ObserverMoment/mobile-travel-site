@@ -17,6 +17,11 @@
       width: 33.33%
     }
 
+    &__col-medium-6 {
+      float: left;
+      width: 50%
+    }
+
     &__col-medium-4--larger {
       float: left;
       width: 37%
@@ -35,13 +40,22 @@
 
   /* Select the colummn and offset the padding below. This will ensure that the last column-child in any row will sit up against the right hand side of the page with no margin */
   /* This is because the negative margin will affect the border-box calculation */
+  /* Combined with the .wrapper css which states overflow: hidden; so that the overhang on the edge of the wrapper caused by this will not display */
   &--gutters {
     margin-right: -65px;
+  }
+
+  &--gutters-wide {
+    margin-right: -100px;
   }
 
   /* Give all children a gutter to the right */
   &--gutters > div {
     padding-right: 65px;
+  }
+
+  &--gutters-wide > div {
+    padding-right: 100px;
   }
 
 }
