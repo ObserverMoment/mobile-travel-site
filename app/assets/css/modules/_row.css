@@ -1,0 +1,47 @@
+.row {
+
+  @mixin clearFix;
+
+  &__b-margin-until-medium {
+    margin-bottom: 1.5rem;
+  }
+
+  @mixin atMedium {
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+
+    &__col-medium-4 {
+      float: left;
+      width: 33.33%
+    }
+
+    &__col-medium-4--larger {
+      float: left;
+      width: 37%
+    }
+
+    &__col-medium-8 {
+      float: left;
+      width: 66.66%
+    }
+
+    &__col-medium-8--smaller {
+      float: left;
+      width: 63%
+    }
+  }
+
+  /* Select the colummn and offset the padding below. This will ensure that the last column-child in any row will sit up against the right hand side of the page with no margin */
+  /* This is because the negative margin will affect the border-box calculation */
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  /* Give all children a gutter to the right */
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
+}

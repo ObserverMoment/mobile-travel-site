@@ -1,0 +1,26 @@
+/*These mixins will replace the need to rewrite media queries repeatedly*/
+/*They will also allow you to easily change break points without having to go into each an every file to do so*/
+@define-mixin atSmall {
+  @media (min-width: 530px) {
+    @mixin-content;
+  }
+}
+@define-mixin atMedium {
+  @media (min-width: 800px) {
+    @mixin-content;
+  }
+}
+@define-mixin atLarge {
+  @media (min-width: 1200px) {
+    @mixin-content;
+  }
+}
+@define-mixin clearFix {
+  /* Create a psuedo element after every row that will clear the floats within it and all the row to display with a height etc. */
+  /* the (display: table) property will ensure cross browser compatibility */
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}

@@ -1,0 +1,28 @@
+.wrapper {
+  /* Overflow: Do not let content spill out over the edges of this wrapper - the max-width below should always hold */
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* This rule says that any wrapper element, that is inside another wrapper element, should not have padding itself. Otherwise it will end up with two lots of padding */
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--b-margin {
+    margin-bottom: 1rem;
+
+    @mixin atSmall {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &--medium {
+    max-width: 976px;
+  }
+
+}
