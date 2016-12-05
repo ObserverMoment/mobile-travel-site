@@ -25,4 +25,14 @@
     max-width: 976px;
   }
 
+  &--no-side-padding-until-medlarge {
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin atMedLarge {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
 }

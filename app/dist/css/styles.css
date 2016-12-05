@@ -478,6 +478,16 @@ a {
 .wrapper--medium {
   max-width: 976px;
 }
+.wrapper--no-side-padding-until-medlarge {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 1000px) {
+  .wrapper--no-side-padding-until-medlarge {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
 .page-section {
   padding: 0.5rem 0;
 
@@ -492,8 +502,13 @@ a {
   color: #FFF;
 }
 .page-section--testimonials {
-  background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-  background-size: cover;
+  background-color: #e0e6ef;
+}
+@media (min-width: 800px) {
+  .page-section--testimonials {
+    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+    background-size: cover;
+  }
 }
 .headline {
   font-weight: 300;
@@ -596,6 +611,46 @@ a {
     width: 63%;
   }
 }
+@media (min-width: 1000px) {
+  .row__b-margin-until-medlarge {
+    margin-bottom: 0;
+  }
+  .row__col-medlarge-4 {
+    float: left;
+    width: 33.33%;
+  }
+  .row__col-medlarge-6 {
+    float: left;
+    width: 50%;
+  }
+  .row__col-medlarge-4--larger {
+    float: left;
+    width: 37%;
+  }
+  .row__col-medlarge-8 {
+    float: left;
+    width: 66.66%;
+  }
+  .row__col-medlarge-8--smaller {
+    float: left;
+    width: 63%;
+  }
+}
+/* Begin equal height rules */
+@media (min-width: 1000px) {
+  .row--equal-child-height-at-med {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* Select all children of this row. Stop them floating left and have them display using flexbox. This will make them flow from left to right and keep them all at the same height */
+.row--equal-child-height-at-med > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .generic-text-container p {
   font-weight: 300;
   line-height: 1.65;
@@ -677,7 +732,15 @@ a {
 }
 .testimonial {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0 1.8125rem 1px 1.8125rem;
+  padding: 0 1.125rem 70px 1.125rem;
+}
+.testimonial--last-child {
+  padding-bottom: 0;
+}
+@media (min-width: 1000px) {
+  .testimonial {
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
 }
 .testimonial__photo {
   margin: 0 auto -80px auto;

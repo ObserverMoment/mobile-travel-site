@@ -1,6 +1,14 @@
 .testimonial {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0 1.8125rem 1px 1.8125rem;
+  padding: 0 1.125rem 70px 1.125rem;
+
+  &--last-child {
+    padding-bottom: 0;
+  }
+
+  @mixin atMedLarge {
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
 
   &__photo {
     margin: 0 auto -80px auto;

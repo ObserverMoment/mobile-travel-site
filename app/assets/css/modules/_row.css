@@ -70,4 +70,51 @@
     }
   }
 
+  @mixin atMedLarge {
+
+    &__b-margin-until-medlarge {
+      margin-bottom: 0;
+    }
+
+    &__col-medlarge-4 {
+      float: left;
+      width: 33.33%
+    }
+
+    &__col-medlarge-6 {
+      float: left;
+      width: 50%
+    }
+
+    &__col-medlarge-4--larger {
+      float: left;
+      width: 37%
+    }
+
+    &__col-medlarge-8 {
+      float: left;
+      width: 66.66%
+    }
+
+    &__col-medlarge-8--smaller {
+      float: left;
+      width: 63%
+    }
+  }
+
+  /* Begin equal height rules */
+  &--equal-child-height-at-med {
+
+    @mixin atMedLarge {
+      display: flex;
+    }
+
+    /* Select all children of this row. Stop them floating left and have them display using flexbox. This will make them flow from left to right and keep them all at the same height */
+    & > div {
+      float: none;
+      display: flex;
+    }
+
+  }
+
 }
