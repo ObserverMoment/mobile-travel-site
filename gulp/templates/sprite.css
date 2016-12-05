@@ -1,0 +1,17 @@
+{{!-- The gulp-svg-sprite package uses the moustache template engine --}}
+{{!-- The sprite template keyword here gets the name of the generated sprite file for us. As the gulp package actually appends a random string of chars to the file name for cache busting reasons --}}
+{{!-- In moustache templates three curly braces means do not escape special characters. vs two sets of curly braces which will escape them --}}
+/* Do not edit modules/_sprite as it is generated automatically by Gulp. Instead edit gulp/templates/sprite */
+{{#shapes}}
+{{!-- The first tag means that this code will only run the first time that the loop runs --}}
+  {{#first}}
+  .icon {
+    background-image: url('/assets/images/sprites/{{{sprite}}}');
+  }
+  {{/first}}
+  .icon--{{base}} {
+    width: {{width.outer}}px;
+    height: {{height.outer}}px;
+    background-position: {{position.relative.xy}};
+  }
+{{/shapes}}
