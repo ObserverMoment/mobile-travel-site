@@ -31,6 +31,6 @@ gulp.task('watch', function() {
 
 // The second arg to this function is for dependencies - these tasks must be run before the main function.
 gulp.task('cssAutoInject', ['styles'], function() {
-  return gulp.src('.app/dist/css/styles.css')
+  return gulp.src('.app/temp/css/styles.css')
         .pipe(browserSync.stream());
 });
